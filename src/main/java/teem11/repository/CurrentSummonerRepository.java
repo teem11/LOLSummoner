@@ -14,9 +14,6 @@ public class CurrentSummonerRepository {
 
     @Autowired
     private MongoTemplate mongoTemplate;
-    @Autowired
-    private CurrentSummonerRepository currentSummonerRepository;
-
 
     public Summoner insertOrUpdatedCurrentSummonerInfo(Summoner summoner) {
         return mongoTemplate.save(summoner);
@@ -27,5 +24,4 @@ public class CurrentSummonerRepository {
         query.addCriteria(Criteria.where("summonerId").is(summonerId));
         return mongoTemplate.findOne(query, Summoner.class);
     }
-
 }
