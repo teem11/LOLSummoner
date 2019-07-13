@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dddb840c-2e48-459a-b9d8-f8f6b96d7a08" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/teem11/api/RiotgamesApiClient.java" afterDir="false" />
-    </list>
+    <list default="true" id="dddb840c-2e48-459a-b9d8-f8f6b96d7a08" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -77,7 +75,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/teem11/api/RiotgamesApiClient.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="171">
@@ -89,9 +87,16 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
-          <provider selected="true" editor-type-id="text-editor" />
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/teem11/service/SummonerService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="399">
+              <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -139,6 +144,7 @@
         <option value="$PROJECT_DIR$/src/main/java/teem11/config/MongoConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/teem11/config/SwaggerConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/teem11/api/RiotgamesApiClient.java" />
+        <option value="$PROJECT_DIR$/src/main/java/teem11/service/SummonerService.java" />
       </list>
     </option>
   </component>
@@ -167,11 +173,6 @@
             <path>
               <item name="lolsummoner" type="b2602c69:ProjectViewProjectNode" />
               <item name="lolsummoner" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lolsummoner" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lolsummoner" type="462c0819:PsiDirectoryNode" />
-              <item name=".idea" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="lolsummoner" type="b2602c69:ProjectViewProjectNode" />
@@ -225,6 +226,15 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="teem11" type="462c0819:PsiDirectoryNode" />
               <item name="domain" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lolsummoner" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lolsummoner" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="teem11" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -343,7 +353,21 @@
       <option name="project" value="LOCAL" />
       <updated>1562999896704</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Api를 이용해서 summonerName을 이용하여 id를 가져오는 클래스 생성">
+      <created>1563000208961</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1563000208961</updated>
+    </task>
+    <task id="LOCAL-00007" summary="SummonerService 클래스에 id를 임시저장하며 summoner를 반환하는 함수 작성">
+      <created>1563000424961</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1563000424961</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -382,7 +406,9 @@
     <MESSAGE value="pox.xml 환경 설정" />
     <MESSAGE value="Summoner domain class 및 변수 설정" />
     <MESSAGE value="필요한 config 설정" />
-    <option name="LAST_COMMIT_MESSAGE" value="필요한 config 설정" />
+    <MESSAGE value="Api를 이용해서 summonerName을 이용하여 id를 가져오는 클래스 생성" />
+    <MESSAGE value="SummonerService 클래스에 id를 임시저장하며 summoner를 반환하는 함수 작성" />
+    <option name="LAST_COMMIT_MESSAGE" value="SummonerService 클래스에 id를 임시저장하며 summoner를 반환하는 함수 작성" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/pom.xml">
@@ -465,6 +491,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
           <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/teem11/service/SummonerService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
