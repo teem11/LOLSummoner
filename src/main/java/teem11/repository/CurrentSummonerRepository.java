@@ -14,6 +14,9 @@ public class CurrentSummonerRepository {
 
     @Autowired
     private MongoTemplate mongoTemplate;
+    @Autowired
+    private CurrentSummonerRepository currentSummonerRepository;
+
 
     public Summoner insertOrUpdatedCurrentSummonerInfo(Summoner summoner) {
         return mongoTemplate.save(summoner);
