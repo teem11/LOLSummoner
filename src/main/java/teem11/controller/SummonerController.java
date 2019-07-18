@@ -16,7 +16,7 @@ public class SummonerController {
 
     @CrossOrigin(origins = "*", allowedHeaders = "*")
     @GetMapping("/by-summonerName/{summonerName}")
-    public Summoner getCurrentSummonerInfo(@PathVariable String summonerName) {
-        return summonerService.getCurrentSummonerIdBySummonerName(summonerName);
+    public List<Summoner> getCurrentSummonerInfo(@PathVariable String summonerName) {
+        return summonerService.getCurrentSummonerInformationsBySummonerName(summonerName);
     }
 }

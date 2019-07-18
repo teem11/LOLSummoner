@@ -18,20 +18,27 @@ public class SummonerService {
     @Autowired
     private CurrentSummonerRepository currentSummonerRepository;
 
-    public Summoner getCurrentSummonerIdBySummonerName(String summonerName) {//
+    public List<Summoner> getCurrentSummonerInformationsBySummonerName(String summonerName) {
         String summonerId;
 
-        Summoner summoner = riotgamesApiClient.getSummonerId(summonerName);
-        summonerId = summoner.getId();
-        List<Summoner> summoner1 = riotgamesApiClient.getSummonerInfo(summonerId);
-        for (int i = 0; i < summoner1.size(); i++) {
-            log.info("{}", i);
-            Summoner target = summoner1.get(i);
-            target.setId(summoner.getId());
-            target.setName(summoner.getName());
-            currentSummonerRepository.insertOrUpdatedCurrentSummonerInfo(target);
-        }
-        return currentSummonerRepository.findCurrentSummonerBySummonerName(summonerId);
+        Summoner summonerForGetId = riotgamesApiClient.getSummonerId(summonerName);
+        summonerId = summonerForGetId.getId();
+        List<Summoner> summonerInformationsForEachQueueType = riotgamesApiClient.getSummonerInfo(summonerId);
+        setSummonerBaseInfo(summonerForGetId, summonerInformationsForEachQueueType);
+        currentSummonerRepository.insertOrUpdatedCurrentSummonerInfo(summonerInformationsForEachQueueType);
+
+        return currentSummonerRepository.findCurrentSummonerInfosBySummonerId(summonerId);
     }
 
+    private void setSummonerBaseInfo(Summoner summonerForGetId, List<Summoner> summonerInformationsForEachQueueType) {
+        for (int i = 0; i < summonerInformationsForEachQueueType.size(); i++) {
+            Summoner summonerInformationForOneQueueType = summonerInformationsForEachQueueType.get(i);
+
+            summonerInformationForOneQueueType.setId(summonerForGetId.getId());
+            summonerInformationForOneQueueType.setName(summonerForGetId.getName());
+            summonerInformationForOneQueueType.setIdAndQueueType(summonerInformationForOneQueueType.getId() + summonerInformationForOneQueueType.getQueueType());
+        }
+    }
 }
+
+

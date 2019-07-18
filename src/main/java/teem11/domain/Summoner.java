@@ -7,6 +7,7 @@ import org.springframework.data.annotation.Id;
 public class Summoner {
 
     @Id
+    private String idAndQueueType;
     private String name;
     private String id;
     private String queueType;
