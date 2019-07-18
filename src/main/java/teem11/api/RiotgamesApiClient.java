@@ -16,7 +16,7 @@ public class RiotgamesApiClient {
     private RestTemplate restTemplate;
 
     private final ParameterizedTypeReference<List<Summoner>> responseType = new ParameterizedTypeReference<List<Summoner>>() {};
-    private final String apiKey = "RGAPI-f222eb69-a724-48bd-a18a-48ea4e8d7148";
+    private final String apiKey = "RGAPI-8a78358f-59f7-435b-a200-1d66a759f667";
     private final String currentSummonerUri = "https://kr.api.riotgames.com/lol/summoner/v4/summoners/by-name/{summonerName}?api_key={apiKey}";
     private final String currentSummonerInfoUri = "https://kr.api.riotgames.com/lol/league/v4/entries/by-summoner/{encryptedSummonerId}?api_key={apiKey}";
 
@@ -30,5 +30,4 @@ public class RiotgamesApiClient {
                 .getBody();
         return responseBody;
     }
-
 }

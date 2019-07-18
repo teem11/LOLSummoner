@@ -18,7 +18,7 @@ public class SummonerService {
     @Autowired
     private CurrentSummonerRepository currentSummonerRepository;
 
-    public Summoner getCurrentSummonerIdBySummonerName(String summonerName) {//
+    public List<Summoner> getCurrentSummonerIdBySummonerName(String summonerName) {//
         String summonerId;
 
         Summoner summoner = riotgamesApiClient.getSummonerId(summonerName);
@@ -29,6 +29,7 @@ public class SummonerService {
             Summoner target = summoner1.get(i);
             target.setId(summoner.getId());
             target.setName(summoner.getName());
+            target.setIdAndQueueType(target.getId()+target.getQueueType());
             currentSummonerRepository.insertOrUpdatedCurrentSummonerInfo(target);
         }
         return currentSummonerRepository.findCurrentSummonerBySummonerName(summonerId);

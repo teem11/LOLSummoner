@@ -9,6 +9,8 @@ import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 import teem11.domain.Summoner;
 
+import java.util.List;
+
 @Repository
 public class CurrentSummonerRepository {
 
@@ -19,9 +21,9 @@ public class CurrentSummonerRepository {
         return mongoTemplate.save(summoner);
     }
 
-    public Summoner findCurrentSummonerBySummonerName(String summonerId) {
+    public List<Summoner> findCurrentSummonerBySummonerName(String summonerId) {
         Query query = new Query();
         query.addCriteria(Criteria.where("summonerId").is(summonerId));
-        return mongoTemplate.findOne(query, Summoner.class);
+        return mongoTemplate.find(query, Summoner.class);
     }
 }
