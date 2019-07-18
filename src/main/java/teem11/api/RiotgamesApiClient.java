@@ -15,19 +15,20 @@ public class RiotgamesApiClient {
     @Autowired
     private RestTemplate restTemplate;
 
-    private final ParameterizedTypeReference<List<Summoner>> responseType = new ParameterizedTypeReference<List<Summoner>>() {};
+    private final ParameterizedTypeReference<List<Summoner>> responseTypeListSummoner = new ParameterizedTypeReference<List<Summoner>>() {};
     private final String apiKey = "RGAPI-8a78358f-59f7-435b-a200-1d66a759f667";
     private final String currentSummonerUri = "https://kr.api.riotgames.com/lol/summoner/v4/summoners/by-name/{summonerName}?api_key={apiKey}";
     private final String currentSummonerInfoUri = "https://kr.api.riotgames.com/lol/league/v4/entries/by-summoner/{encryptedSummonerId}?api_key={apiKey}";
 
     public Summoner getSummonerId(String summonerName) {
-        Summoner summonerId = restTemplate.exchange(currentSummonerUri, HttpMethod.GET, null, Summoner.class, summonerName, apiKey).getBody();
-        return summonerId;
+        Summoner summonerForGetId = restTemplate.exchange(currentSummonerUri, HttpMethod.GET, null, Summoner.class, summonerName, apiKey).getBody();
+        return summonerForGetId;
     }
 
     public List<Summoner> getSummonerInfo(String encryptedSummonerId) {
-        List<Summoner> responseBody = restTemplate.exchange(currentSummonerInfoUri, HttpMethod.GET, null, responseType, encryptedSummonerId, apiKey)
+        List<Summoner> summonerInformationsForEachQueueType = restTemplate.exchange(currentSummonerInfoUri, HttpMethod.GET, null, responseTypeListSummoner, encryptedSummonerId, apiKey)
                 .getBody();
-        return responseBody;
+        return summonerInformationsForEachQueueType;
+        
     }
 }

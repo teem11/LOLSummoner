@@ -18,21 +18,19 @@ public class SummonerService {
     @Autowired
     private CurrentSummonerRepository currentSummonerRepository;
 
-    public List<Summoner> getCurrentSummonerIdBySummonerName(String summonerName) {//
+    public List<Summoner> getCurrentSummonerInformationsBySummonerName(String summonerName) {//
         String summonerId;
 
-        Summoner summoner = riotgamesApiClient.getSummonerId(summonerName);
-        summonerId = summoner.getId();
-        List<Summoner> summoner1 = riotgamesApiClient.getSummonerInfo(summonerId);
-        for (int i = 0; i < summoner1.size(); i++) {
-            log.info("{}", i);
-            Summoner target = summoner1.get(i);
-            target.setId(summoner.getId());
-            target.setName(summoner.getName());
-            target.setIdAndQueueType(target.getId()+target.getQueueType());
-            currentSummonerRepository.insertOrUpdatedCurrentSummonerInfo(target);
+        Summoner summonerForGetId = riotgamesApiClient.getSummonerId(summonerName);
+        summonerId = summonerForGetId.getId();
+        List<Summoner> summonerInformationsForEachQueueType = riotgamesApiClient.getSummonerInfo(summonerId);
+        for (int i = 0; i < summonerInformationsForEachQueueType.size(); i++) {
+            Summoner summonerInformationForOneQueueType = summonerInformationsForEachQueueType.get(i);
+            summonerInformationForOneQueueType.setId(summonerForGetId.getId());
+            summonerInformationForOneQueueType.setName(summonerForGetId.getName());
+            summonerInformationForOneQueueType.setIdAndQueueType(summonerInformationForOneQueueType.getId()+summonerInformationForOneQueueType.getQueueType());
+            currentSummonerRepository.insertOrUpdatedCurrentSummonerInfo(summonerInformationForOneQueueType);
         }
-        return currentSummonerRepository.findCurrentSummonerBySummonerName(summonerId);
+        return currentSummonerRepository.findCurrentSummonerInfosBySummonerId(summonerId);
     }
-
 }

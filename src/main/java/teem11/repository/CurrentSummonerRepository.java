@@ -21,7 +21,7 @@ public class CurrentSummonerRepository {
         return mongoTemplate.save(summoner);
     }
 
-    public List<Summoner> findCurrentSummonerBySummonerName(String summonerId) {
+    public List<Summoner> findCurrentSummonerInfosBySummonerId(String summonerId) {
         Query query = new Query();
         query.addCriteria(Criteria.where("summonerId").is(summonerId));
         return mongoTemplate.find(query, Summoner.class);
