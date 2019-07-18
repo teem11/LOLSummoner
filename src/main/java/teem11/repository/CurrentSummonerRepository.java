@@ -17,8 +17,10 @@ public class CurrentSummonerRepository {
     @Autowired
     private MongoTemplate mongoTemplate;
 
-    public Summoner insertOrUpdatedCurrentSummonerInfo(Summoner summoner) {
-        return mongoTemplate.save(summoner);
+    public void insertOrUpdatedCurrentSummonerInfo(List<Summoner> summonerInformationsForEachQueueType) {
+        for (int i = 0; i < summonerInformationsForEachQueueType.size(); i++) {
+            mongoTemplate.save(summonerInformationsForEachQueueType.get(i));
+        }
     }
 
     public List<Summoner> findCurrentSummonerInfosBySummonerId(String summonerId) {

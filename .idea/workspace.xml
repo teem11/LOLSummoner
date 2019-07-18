@@ -3,12 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="dddb840c-2e48-459a-b9d8-f8f6b96d7a08" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/teem11/api/RiotgamesApiClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/teem11/api/RiotgamesApiClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/teem11/controller/SummonerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/teem11/controller/SummonerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/teem11/repository/CurrentSummonerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/teem11/repository/CurrentSummonerRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/teem11/service/SummonerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/teem11/service/SummonerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/teem11/api/RiotgamesApiClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/teem11/api/RiotgamesApiClient.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/teem11/controller/SummonerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/teem11/controller/SummonerController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/teem11/service/SummonerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/teem11/service/SummonerService.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -35,8 +31,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/teem11/api/RiotgamesApiClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="316">
-              <caret line="30" column="51" selection-start-line="30" selection-start-column="15" selection-end-line="30" selection-end-column="51" />
+            <state relative-caret-position="297">
+              <caret line="29" column="24" lean-forward="true" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -44,11 +40,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/teem11/service/SummonerService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="263">
-              <caret line="33" column="83" selection-start-line="33" selection-start-column="83" selection-end-line="33" selection-end-column="83" />
+            <state relative-caret-position="292">
+              <caret line="39" column="9" lean-forward="true" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -68,15 +64,13 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/teem11/repository/CurrentSummonerRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="259">
-              <caret line="25" column="49" selection-start-line="25" selection-start-column="49" selection-end-line="25" selection-end-column="49" />
+            <state relative-caret-position="225">
+              <caret line="22" column="9" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#572#573#0" expanded="true" />
-                <element signature="e#625#626#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -121,7 +115,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/teem11/config/SwaggerConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
+            <state relative-caret-position="382">
               <caret line="38" column="10" selection-start-line="38" selection-start-column="10" selection-end-line="38" selection-end-column="10" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -171,10 +165,10 @@
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/teem11/App.java" />
         <option value="$PROJECT_DIR$/src/main/java/teem11/domain/Summoner.java" />
-        <option value="$PROJECT_DIR$/src/main/java/teem11/repository/CurrentSummonerRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/teem11/controller/SummonerController.java" />
         <option value="$PROJECT_DIR$/src/main/java/teem11/api/RiotgamesApiClient.java" />
         <option value="$PROJECT_DIR$/src/main/java/teem11/service/SummonerService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/teem11/repository/CurrentSummonerRepository.java" />
       </list>
     </option>
   </component>
@@ -307,6 +301,7 @@
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
@@ -482,7 +477,14 @@
       <option name="project" value="LOCAL" />
       <updated>1563411625911</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="변수명 Refactoring">
+      <created>1563412464458</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1563412464458</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -531,7 +533,8 @@
     <MESSAGE value="service class에서 기존 메소드에서 Summoner정보를 DB에 넣고 다시 DB에서 가져오는 메소드로 수정" />
     <MESSAGE value="domain class에 summoner정보 속성 추가" />
     <MESSAGE value="Restful하게 GET하는 type을 List&lt;Summoner&gt;형으로 바꾸면서 repository에서 한 summoner에 대해서 queuetype에 따른 1개 이상의 모든 정보를 가져오도록 바꿈." />
-    <option name="LAST_COMMIT_MESSAGE" value="Restful하게 GET하는 type을 List&lt;Summoner&gt;형으로 바꾸면서 repository에서 한 summoner에 대해서 queuetype에 따른 1개 이상의 모든 정보를 가져오도록 바꿈." />
+    <MESSAGE value="변수명 Refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="변수명 Refactoring" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
@@ -647,10 +650,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/teem11/config/SwaggerConfig.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/teem11/domain/Summoner.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="38" column="10" selection-start-line="38" selection-start-column="10" selection-end-line="38" selection-end-column="10" />
+        <state relative-caret-position="171">
+          <caret line="9" column="33" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -669,16 +672,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/teem11/domain/Summoner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="33" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/teem11/controller/SummonerController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="278">
@@ -689,20 +682,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/teem11/api/RiotgamesApiClient.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/teem11/config/SwaggerConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="30" column="51" selection-start-line="30" selection-start-column="15" selection-end-line="30" selection-end-column="51" />
+        <state relative-caret-position="382">
+          <caret line="38" column="10" selection-start-line="38" selection-start-column="10" selection-end-line="38" selection-end-column="10" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/teem11/service/SummonerService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/teem11/api/RiotgamesApiClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="33" column="83" selection-start-line="33" selection-start-column="83" selection-end-line="33" selection-end-column="83" />
+        <state relative-caret-position="297">
+          <caret line="29" column="24" lean-forward="true" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -711,12 +704,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/teem11/repository/CurrentSummonerRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="25" column="49" selection-start-line="25" selection-start-column="49" selection-end-line="25" selection-end-column="49" />
+        <state relative-caret-position="225">
+          <caret line="22" column="9" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#572#573#0" expanded="true" />
-            <element signature="e#625#626#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/teem11/service/SummonerService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="39" column="9" lean-forward="true" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
